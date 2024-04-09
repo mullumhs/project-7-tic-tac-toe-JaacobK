@@ -36,9 +36,12 @@ while True:
     if count % 2 == 0:
         token = "O"
     count += 1
-    print (count)
-
-    collum_choice = int(input("What Collum (1 - 7)"))
+    collum_choice = int(input("What Collum (1 - 7)?\n"))
     collum_choice -= 1
-    board[5][collum_choice] = token
+
+    pos_row = 5
+    while board[pos_row][collum_choice] == "X" or board[pos_row][collum_choice] == "O":
+        pos_row -= 1
+        
+    board[pos_row][collum_choice] = token
     display_board()
