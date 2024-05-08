@@ -45,12 +45,13 @@ def win_checking():
     return wincheck
 
 def win_condition():
+    drawtimer = 9
     wincheck = win_checking()
     print(wincheck)
-    print(dict.values())
+    print(drawtimer)
     if wincheck == True:
         print("you win")
-    elif wincheck != False and board[dict.values()[0]][dict.values()[1]] != "-":
+    elif wincheck == False and board == [[token, token, token], [token, token, token], [token, token, token]]
             print("test")
 
 
@@ -80,6 +81,7 @@ def turn_and_place_system():
         count += 1
         display_board()
         win_condition()
+
 
 
 initilise_board()

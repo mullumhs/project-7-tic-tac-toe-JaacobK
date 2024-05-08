@@ -32,11 +32,14 @@ def turn_and_place_system():
         token = "X"
         if count % 2 == 0:
             token = "O"
+        choice = (input("Where do you want to place?\n")).upper()
+        #board[dict[choice][0]][dict[choice][1]] = token
+        board = [[token, token, token], [token, token, token], [token, token, token]]
+        print(board)
         count += 1
-        
-        board[dict.keys()][dict.values] = token
-        display_board()
-        
+        #display_board()
+
+
 
 initilise_board()
 turn_and_place_system()
