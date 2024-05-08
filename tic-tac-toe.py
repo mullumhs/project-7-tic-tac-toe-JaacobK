@@ -44,18 +44,6 @@ def win_checking():
         wincheck = True
     return wincheck
 
-def win_condition():
-    drawtimer = 9
-    wincheck = win_checking()
-    print(wincheck)
-    print(drawtimer)
-    if wincheck == True:
-        print("you win")
-    elif wincheck == False and board == [[token, token, token], [token, token, token], [token, token, token]]
-            print("test")
-
-
-
 def turn_and_place_system():
     count = 1
     while True:
@@ -80,7 +68,15 @@ def turn_and_place_system():
         board[dict[choice][0]][dict[choice][1]] = token
         count += 1
         display_board()
-        win_condition()
+        wincheck = win_checking()
+        print(wincheck)
+        if wincheck == True:
+            print("you win")
+            play_again = int(input("Do you wish to play again?\nType 1 if yes\nType 2 if no"))
+            while play_again != 1 or play_again != 2:
+                play_again == int(input("Do you wish to play again?\nType 1 if yes\nType 2 if no"))
+        elif wincheck == False and count == 9:
+            print("draw")
 
 
 
