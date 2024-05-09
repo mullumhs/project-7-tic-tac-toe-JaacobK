@@ -117,9 +117,7 @@ def main():
             elif wincheck == False and draw_checking(board) == True:
                 loop == False
                 return token
-            
-
-            
+                    
     def game():
         #Calls the turn_and_place_system() to strart the game and get the token when it finishes
         token = turn_and_place_system()
